@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>This is Demo class of Hello.html</h1>
+    <p>name of user<span th:text="${name}"></span></p>
+    <p>age of user <span th:text="${age}"></span> <p/>
+    <p>which language is learn <span th:text="${learn}"></span> </p>
+
+    <ul>
+        <li th:each ="name,status :${list}" >
+            <span th:text="${status.index+1 + ' ' + name}"/>
+
+        </li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>This is condition Statement</h1>
+    <br>
+    <h3>this is id-else condition</h3>
+    <span th:text="${check} ? 'user is active' : 'user is inactive'"/>
+
+    <h3>this is if and unless condition</h3>
+
+    <span th:if="${gender}=='M'">Male</span>
+    <span th:unless="${gender}=='M'">Female</span>
+
+</body>
+</html>
