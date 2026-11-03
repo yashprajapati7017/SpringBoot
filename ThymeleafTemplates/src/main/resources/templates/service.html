@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>This is service page</h1>
+    <p>This is page made by Yash Prajapati</p>
+
+<!--    this is a replace tag-->
+        <FOOTER id="hostTag" th:replace="Fotter::footer1(${title},${subtitle})"/>
+
+<!--this is a insert Tag-->
+<!--        <FOOTER id="hostTag1" th:insert="Fotter::footer1"/>-->
+
+
+<!--this is include tag-->
+<!--        <FOOTER id="hostTag2" th:include="Fotter::footer1"/>-->
+
+</body>
+</html>

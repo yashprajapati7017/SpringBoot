@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <FOOTER id="fragmentTag" th:fragment="footer1(title,subtitle)"  >
+        <h1>This is Footer html page</h1>
+        <p th:text="${title}"/>
+        <p>Welcome to this page </p>
+        <p>This message come from Fotter.html</p>
+        <span th:text="${subtitle}"/>
+    </FOOTER>
+</body>
+</html>
