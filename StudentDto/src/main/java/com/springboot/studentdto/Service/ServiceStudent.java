@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ServiceStudent {
@@ -37,9 +38,9 @@ public class ServiceStudent {
         return resStudent;
     }
 
-    public Student getId(Integer id){
+    public StudentResponceDTO getId(Integer id){
         Student resStudent= studentRepo.findByIdAndDeletedIsFalse(id);
-        return resStudent;
+        return MapToResponce(resStudent);
     }
 
     public StudentResponceDTO UpdateStudent(Integer id, StudentResponceDTO studentResponceDTO){

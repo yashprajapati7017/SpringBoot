@@ -35,15 +35,15 @@ public class StudentController {
     public ResponseEntity<List<Student>>GetAllStudents(){
          List<Student> responceStudent= serviceStudent.GetStudent();
 
-         if(responceStudent==null){
+         if(responceStudent.isEmpty()){
              return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
          }
          return ResponseEntity.status(HttpStatus.FOUND).body(responceStudent);
     }
 
     @GetMapping("/student/{id}")
-    public ResponseEntity<Student> getById(@PathVariable Integer id){
-        Student responceStudent=serviceStudent.getId(id);
+    public ResponseEntity<StudentResponceDTO> getById(@PathVariable Integer id){
+        StudentResponceDTO responceStudent=serviceStudent.getId(id);
         if(responceStudent==null){
             ResponseEntity.notFound().build();
         }
