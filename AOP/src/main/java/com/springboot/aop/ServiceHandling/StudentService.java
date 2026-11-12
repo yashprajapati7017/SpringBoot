@@ -9,9 +9,9 @@ public class StudentService {
 
         System.out.println("Student create");
 
-        throw new RuntimeException("RuntimeException");
+//        throw new RuntimeException("RuntimeException");
 
-
+        return "Student create";
     }
 
 }
